@@ -1,4 +1,4 @@
-# WhiteBells
+<h1 align='center'>WhiteBells</h1>
 
 ### Folder Structure
 
