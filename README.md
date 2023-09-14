@@ -8,33 +8,33 @@ Frontend/
 |-- public/
 |
 |-- src/
-|   |-- components
-|   |   |-- Footer
+|   |-- components/
+|   |   |-- Footer/
 |   |   |   |-- Footer.jsx
 |   |   |   |-- Footer.module.css
 |   |   |
-|   |   |-- Navbar
+|   |   |-- Navbar/
 |   |   |   |-- Navbar.jsx
 |   |   |   |-- Navbar.module.css
 |   |   |
-|   |   |-- Product
+|   |   |-- Product/
 |   |   |   |-- Product.jsx
 |   |   |   |-- Product.module.css
 |   |
-|   |-- pages
-|   |   |-- Aboutus
+|   |-- pages/
+|   |   |-- Aboutus/
 |   |   |   |-- Aboutus.jsx
 |   |   |   |-- Aboutus.module.css
 |   |   |
-|   |   |-- Contactus
+|   |   |-- Contactus/
 |   |   |   |-- Contactus.jsx
 |   |   |   |-- Contactus.module.css
 |   |   |
-|   |   |-- Home
+|   |   |-- Home/
 |   |   |   |-- Home.jsx
 |   |   |   |-- Home.module.css
 |   |   |
-|   |   |-- Products
+|   |   |-- Products/
 |   |   |   |-- Products.jsx
 |   |   |   |-- Products.module.css
 |
