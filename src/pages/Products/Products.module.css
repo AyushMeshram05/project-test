@@ -1,0 +1,149 @@
+.wrapper{
+    background-color: pink;
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: auto;
+    overflow-x: hidden;
+    position: relative;
+    /*  
+    white-space: 'nowrap' */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+/* .check{
+    border: 2px solid brown;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+} */
+
+.card{
+    width: 18rem;
+    background-color: rgb(238, 199, 206);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* padding: 10px 0px; */
+    border-radius: 20px;
+    cursor: pointer;
+    
+    
+}
+.card:hover{
+    padding: -5px;
+}
+
+.image{
+    height: 150px ;
+    width: 150px;
+    border-radius: 100%;
+    border: 10px solid white;
+
+
+
+}
+.img{
+    height: 400px;
+    width: 400px;
+    border: 3px solid black;
+    /* margin-left: 100px; */
+}
+.des{
+    border: 2px solid black;
+    width: 50%;
+    
+}
+
+.smImg{
+    height: 70px;
+    width: 70px;
+
+}
+.back{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* justify-content: center; */
+    border: 2px solid black;
+}
+ .singlecard{
+    background-color:rgba(255, 98, 124, 0.831);
+    height: 97vh;
+    position: fixed;
+    width: 93%;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    /* justify-content: center; */
+    /* align-items: center; */
+    top: 20px;
+    /* margin: 15px; */
+    
+    /* top: 50%; */
+    left: 50px;
+
+    
+    /* z-index: 100; */
+    /* margin-left:80px; */
+    /* border-radius: 20px; */
+    /* color: #fff; */
+ }
+ 
+
+.image{
+    height: 200px;
+    width: 200px;
+}
+
+.cross{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 7px;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 10px;
+    border: 1px solid black;
+
+}
+.cross:hover{
+    padding: 6px;
+    box-shadow: 2px grey;
+}
+
+
+.scroll{
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    gap: 83px;
+    margin: 0 40px;
+}
+
+   
+  .scroll::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .row_poster {
+    
+    min-width: 300px;
+    
+    
+  }
+
+  
+  @media (max-width: 576px) { 
+    .scroll{
+        /* background-color: red; */
+        margin: 0 50px;
+    }
+  }
+  
+  
+  
+  
