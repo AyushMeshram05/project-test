@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState,useRef } from 'react';
 import styles from "./Products.module.css"
 import img2 from "../../assets/Products/631702f4-1368-4592-b7d0-6c798c231140.jpg"
 // import img1 from "../../assets/Products/5d"
@@ -8,22 +8,22 @@ import { TopPick } from '../../data/TopPick';
 import CardDetail from './CardDetails'; // Import the CardDetail component
 
 const Products = () => {
-
+  const [scrollPosition, setScrollPosition] = useState(0);
 
   const handleLeftSlide = () => {
     const slider = document.getElementById('slider');
-    slider.scrollLeft = slider.scrollLeft -400;
-    // setScrollPosition(newPosition);
-    // slider.scrollTo({ left: newPosition, behavior: 'smooth' });
+    const newPosition = scrollPosition - 400;
+    setScrollPosition(newPosition);
+    slider.scrollTo({ left: newPosition, behavior: 'smooth' });
   }
 
   const handleRightSlide = () => {
     const slider = document.getElementById('slider');
-    slider.scrollRight = slider.scrollRight +500;
-    // const newPosition = scrollPosition + 400;
-    // setScrollPosition(newPosition);
-    // slider.scrollTo({ left: newPosition, behavior: 'smooth' });
+    const newPosition = scrollPosition + 400;
+    setScrollPosition(newPosition);
+    slider.scrollTo({ left: newPosition, behavior: 'smooth' });
   }
+
   return (
     <div className={`${styles.wrapper}`}>
       <div className={`${styles.horizontal}`}>
