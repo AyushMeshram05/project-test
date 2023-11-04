@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import styles from "./Products.module.css"
 import img2 from "../../assets/Products/631702f4-1368-4592-b7d0-6c798c231140.jpg"
@@ -5,69 +6,24 @@ import img2 from "../../assets/Products/631702f4-1368-4592-b7d0-6c798c231140.jpg
 
 import { TopPick } from '../../data/TopPick';
 import CardDetail from './CardDetails'; // Import the CardDetail component
-const topicks = [
-  {
-    title: 'Card 1',
-    imageUrl: img2,
-  },
-  {
-    title: 'Card 2',
-    imageUrl: img2,
-  },
-  {
-    title: 'Card 3',
-    imageUrl: img2,
-  },
-  {
-    title: 'Card 4',
-    imageUrl: img2,
-  },
-  {
-    title: 'Card 4',
-    imageUrl: img2,
-  },
-  {
-    title: 'Card 4',
-    imageUrl: img2,
-  },
 
-]
-
-const cardData = [
-  {
-    title: 'Card 1',
-    imageUrl: img2,
-  },
-  {
-    title: 'Card 2',
-    imageUrl: img2,
-  },
-  {
-    title: 'Card 3',
-    imageUrl: img2,
-  },
-  {
-    title: 'Card 4',
-    imageUrl: img2,
-  },
-  {
-    title: 'Card 3',
-    imageUrl: img2,
-  },
-  {
-    title: 'Card 4',
-    imageUrl: img2,
-  },
-  {
-    title: 'Card 3',
-    imageUrl: img2,
-  },
-  {
-    title: 'Card 4',
-    imageUrl: img2,
-  },
-];
 const Products = () => {
+
+
+  const handleLeftSlide = () => {
+    const slider = document.getElementById('slider');
+    slider.scrollLeft = slider.scrollLeft -400;
+    // setScrollPosition(newPosition);
+    // slider.scrollTo({ left: newPosition, behavior: 'smooth' });
+  }
+
+  const handleRightSlide = () => {
+    const slider = document.getElementById('slider');
+    slider.scrollRight = slider.scrollRight +500;
+    // const newPosition = scrollPosition + 400;
+    // setScrollPosition(newPosition);
+    // slider.scrollTo({ left: newPosition, behavior: 'smooth' });
+  }
   return (
     <div className={`${styles.wrapper}`}>
       <div className={`${styles.horizontal}`}>
@@ -75,7 +31,9 @@ const Products = () => {
           {" "}
           <strong>Tops Picks</strong>
         </h4>
-        <div className={styles.scroll}>
+        <div  className='d-flex justify-content-between align-items-center mx-2 '>
+        <i className="fa-solid fa-chevron-left fs-1 cursor-pointer" onClick={handleLeftSlide}></i>
+        <div className={`${styles.scroll}`} id="slider">
           {TopPick.filter((card) => card.topPick) // Filter items where topPick is true
             .map((card, index) => (
               <div
@@ -87,6 +45,8 @@ const Products = () => {
               </div>
             ))}
         </div>
+        <i className="fa-solid fa-chevron-right fs-1 cursor-pointer" onClick={handleRightSlide}></i>
+        </div>
       </div>
       <div>
         <h4 className="px-5 py-2 ">
@@ -94,20 +54,20 @@ const Products = () => {
           <strong>Newly Lanuched</strong>
         </h4>
 
-        <div className="row d-flex justify-content-evenly align-items-center gap-5 p-2">
+        <div className={`${styles.new} row`} >
         {TopPick.map((card, index) => {
   if (!card.topPick) {
     return (
       <div
         key={index}
-        className={`col-lg-4 col-md-6 col-sm-12 card ${styles.card}`}
+        className={`col-lg-4 col-md-6 col-sm-12 card  ${styles.card}`}
       >
         <img className={`${styles.image}`} src={card.imageUrl} alt="/" />
         <p>title: {card.title}</p>
       </div>
     );
   }
-  // return null; // If topPick is true, don't render anything
+
 })}
         </div>
       </div>
